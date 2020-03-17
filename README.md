@@ -27,7 +27,7 @@ Let's say we have a 10-second song, with the following volumes at each second:
 
 This can be modeled as a list, with each index of the list representing the second in the song:
 
-Input:
+**Input:**
 ```
 List:  [-34, -27, -32, -62, -71, -45, -12, -53, -16, -44]
 #Index:   0,   1,   2,   3,   4,   5,   6,   7,   8,   9
@@ -35,33 +35,33 @@ List:  [-34, -27, -32, -62, -71, -45, -12, -53, -16, -44]
 
 As you can see, the song above reaches a maximum volume of -12 dB, and this occurs at index 6, or the 6th second. Therefore, your program would return "6" as the output for this scenario.
 
-Output:
+**Output:**
 ```
 6
 ```
 
 ### Example 2
-Input:
+**Input:**
 ```
 List:  [-23, -26, -73, -32, -65, -59, -19, 2, 6, 0]
 ```
 
 As you can see, the song above reaches a maximum volume of 6 dB. But, on index 2, we have a volume of -73 dB. Since this falls outside the acceptable range, this song is invalid. Return "Invalid".
 
-Output:
+**Output:**
 ```
 Invalid
 ```
 
 ### Example 3
-Input:
+**Input:**
 ```
 List:  [-5, -5, -5]
 ```
 
 This 3-second song stays the same volume throughout. Therefore we return the earliest second, 0.
 
-Output:
+**Output:**
 ```
 0
 ```
