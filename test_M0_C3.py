@@ -32,7 +32,7 @@ class Test_M0_C3(unittest.TestCase):
     def test_loudest_outrageous_size(self):
         test = []
         for x in range(36234):
-            test.append(random.randint(-72,10))
+            test.append(random.randint(-72,9))
         index = random.randint(0, 36235)
         test[index] = 10
         output = get_loudest_second(test)
