@@ -10,6 +10,10 @@ Volumes can range from -72 to +10 (inclusive) on a mix, measured in decibels (dB
 - But if the volume ever falls outside of [-72, +10] at any point, return "Invalid" as the output.
 - If there are multiple "loudest" places in the song, return the earliest one.
 
+### Assumptions
+- The input to the function will always be a list and nothing else.
+- Aside from invalid values, the list will always contain integers and nothing else.
+
 ## Examples
 ### Example 1
 Let's say we have a 10-second song, with the following volumes at each second:
