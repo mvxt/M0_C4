@@ -1,5 +1,5 @@
-# M0.C3 - Max Volume
-Repository with prompt and code for Module 1, Challenge 3: Max Volume.
+# M0_C4 - Max Volume
+Repository with prompt and code for Module 1, Challenge 4: Max Volume.
 
 ## Prompt
 As an audio engineer, your job is to mix and master music to generate hit songs for a popular artist. One of the things you have to do is find the maximum volume of the mix so you can properly balance it.
@@ -73,5 +73,5 @@ This 3-second song stays the same volume throughout. Therefore we return the ear
 ## Instructions
 1. Fork this repository to your own account.
 2. Clone the forked repository to your local computer.
-3. Inside `M0_C3.py`, you should see a function definition with no content. Write your logic there.
-4. While you're writing and/or when you're done, you can execute the provided tests to verify your function works by running `python3 test_M0_C3.py`. Acceptable is at least 4/6 tests passing. All tests are passing if you see `OK` in the output.
+3. Inside `loudest_volume.py`, you should see a function definition with no content. Write your logic there.
+4. While you're writing and/or when you're done, you can execute the provided tests to verify your function works by running `python3 test_loudest_volume.py`. Acceptable is at least 4/6 tests passing. All tests are passing if you see `OK` in the output.

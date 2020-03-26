@@ -1,9 +1,9 @@
 import random
 import unittest
 
-from M0_C3 import get_loudest_second
+from loudest_second import get_loudest_second
 
-class Test_M0_C3(unittest.TestCase):
+class TestGetLoudestSecond(unittest.TestCase):
     def test_loudest_basic(self):
         test = [-34, -27, -32, -62, -71, -45, -12, -53, -16, -44]
         output = get_loudest_second(test)
