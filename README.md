@@ -73,5 +73,5 @@ This 3-second song stays the same volume throughout. Therefore we return the ear
 ## Instructions
 1. Fork this repository to your own account.
 2. Clone the forked repository to your local computer.
-3. Inside `loudest_volume.py`, you should see a function definition with no content. Write your logic there.
+3. Inside `loudest_second.py`, you should see a function definition with no content. Write your logic there.
 4. While you're writing and/or when you're done, you can execute the provided tests to verify your function works by running `python3 test_loudest_second.py`. Acceptable is at least 4/6 tests passing. All tests are passing if you see `OK` in the output.
