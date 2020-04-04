@@ -37,7 +37,7 @@ List:  [-34, -27, -32, -62, -71, -45, -12, -53, -16, -44]
 #Index:   0,   1,   2,   3,   4,   5,   6,   7,   8,   9
 ```
 
-As you can see, the song above reaches a maximum volume of -12 dB, and this occurs at index 6, or the 6th second. Therefore, your program would return "6" as the output for this scenario.
+As you can see, the song above reaches a maximum volume of -12 dB, and this occurs at index 6, or the 6th second. Therefore, your function would return `6` as the output for this scenario.
 
 **Output:**
 ```
@@ -74,4 +74,4 @@ This 3-second song stays the same volume throughout. Therefore we return the ear
 1. Fork this repository to your own account.
 2. Clone the forked repository to your local computer.
 3. Inside `loudest_volume.py`, you should see a function definition with no content. Write your logic there.
-4. While you're writing and/or when you're done, you can execute the provided tests to verify your function works by running `python3 test_loudest_volume.py`. Acceptable is at least 4/6 tests passing. All tests are passing if you see `OK` in the output.
+4. While you're writing and/or when you're done, you can execute the provided tests to verify your function works by running `python3 test_loudest_second.py`. Acceptable is at least 4/6 tests passing. All tests are passing if you see `OK` in the output.
