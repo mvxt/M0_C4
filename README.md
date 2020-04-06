@@ -1,8 +1,8 @@
-# M0_C4 - Max Volume
-Repository with prompt and code for Module 1, Challenge 4: Max Volume.
+# M0_C4 - Max Volume Second
+Repository with prompt and code for Module 1, Challenge 4: Max Volume Second.
 
 ## Prompt
-As an audio engineer, your job is to mix and master music to generate hit songs for a popular artist. One of the things you have to do is find the maximum volume of the mix so you can properly balance it.
+As an audio engineer, your job is to mix and master music to generate hit songs for a popular artist. One of the things you have to do is find the maximum volume of the mix and where it occurs so you can properly balance it.
 
 Volumes can range from -72 to +10 (inclusive) on a mix, measured in decibels (dB). Anything outside of that range is invalid.
 
