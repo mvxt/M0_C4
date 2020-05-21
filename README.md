@@ -1,18 +1,18 @@
-# M0_C4 - Max Volume Second
+# M0_C4 - Peak Level
 Repository with prompt and code for Module 1, Challenge 4: Max Volume Second.
 
 ## Prompt
-As an audio engineer, your job is to mix and master music to generate hit songs for a popular artist. One of the things you have to do is find the maximum volume of the mix and where it occurs so you can properly balance it.
+As an audio engineer, your job is to mix and master music to generate hit songs for a popular artist. One of the things you have to do is see the peak volume of the mix at any second so you can properly balance it.
 
-Volumes can range from -72 to +10 (inclusive) on a mix, measured in decibels (dB). Anything outside of that range is invalid.
+Volumes can range from -72 to +10 (inclusive) on a mix, measured in decibels (dB).
 
-- Given a list of numbers representing the song's volume at a given second, write a function that returns the loudest second in the song.
-- But if the volume ever falls outside of [-72, +10] at any point, return "Invalid" as the output.
-- If there are multiple "loudest" places in the song, return the earliest one.
+- Given a list of numbers representing the song's volume at a given second, write a function that returns a list of the current peak value at each second.
+- If the volume falls below -72, set the peak value at that second to "-Inf" and then reset the peak.
+- If the volume goes above +10, set the peak value at that second to "CLIP" and then reset the peak.
 
 ### Assumptions
 - The input to the function will always be a list and nothing else.
-- Aside from invalid values, the list will always contain integers and nothing else.
+- The list will only contain integers, so no error handling is necessary.
 
 ## Examples
 ### Example 1
@@ -31,44 +31,42 @@ Let's say we have a 10-second song, with the following volumes at each second:
 
 This can be modeled as a list, with each index of the list representing the second in the song:
 
-**Input:**
 ```
-List:  [-34, -27, -32, -62, -71, -45, -12, -53, -16, -44]
-#Index:   0,   1,   2,   3,   4,   5,   6,   7,   8,   9
+# Input
+[-34, -27, -32, -62, -71, -45, -12, -53, -16, -44] # List
+   0,   1,   2,   3,   4,   5,   6,   7,   8,   9  # Index
+
+# Output
+[-34, -27, -27, -27, -27, -27, -12, -12, -12, -12]
 ```
 
-As you can see, the song above reaches a maximum volume of -12 dB, and this occurs at index 6, or the 6th second. Therefore, your function would return `6` as the output for this scenario.
+In the example above, at index 0, this is our first volume of the song so it is the first "peak" value. However, at index 1, we have a higher level of -27, so that's the new peak starting at that index. For the next several indices, the volumes are all lower than -27, so -27 remains the peak value.
 
-**Output:**
-```
-6
-```
+Then, at index 6, we have a new "high" peak of -12. For the rest of the song, -12 is the peak value.
 
 ### Example 2
-**Input:**
 ```
-List:  [-23, -26, -73, -32, -65, -59, -19, 2, 6, 0]
+# Input
+[-23, -26, -73, -32, -65, -59, -19,   2,   6,   0] # List
+   0    1    2    3    4    5    6    7    8    9  # Index
+
+# Output
+[-23, -23, '-Inf', -32, -32, -32, -19, 2, 6, 6]
 ```
 
-As you can see, the song above reaches a maximum volume of 6 dB. But, on index 2, we have a volume of -73 dB. Since this falls outside the acceptable range, this song is invalid. Return "Invalid".
-
-**Output:**
-```
-Invalid
-```
+This example demonstrates something trickier. The first volume is a new peak, per usual, but at index 2, we have a volume falling below -72. Per requirements, we set the value here to `'-Inf'` and then we **reset** the peak counter. So the next value after `'-Inf'` is `-32`, which remains the new peak for a few seconds.
 
 ### Example 3
-**Input:**
 ```
-List:  [-5, -5, -5]
+# Input
+[-5, 200,  -8] # List
+  0    1    2  # Index
+
+# Output
+[-5, 'CLIP', -8]
 ```
 
-This 3-second song stays the same volume throughout. Therefore we return the earliest second, 0.
-
-**Output:**
-```
-0
-```
+This 3-second song goes above +10 at index 1 and clips, which resets the peak volume for the second after.
 
 ## Instructions
 1. Fork this repository to your own account.
