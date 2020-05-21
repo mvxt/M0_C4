@@ -1,4 +1,4 @@
-# M0_C4 - Peak Level
+# M0_C4 - Peak Volumes
 Repository with prompt and code for Module 1, Challenge 4: Max Volume Second.
 
 ## Prompt
