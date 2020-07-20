@@ -1,8 +1,23 @@
 # M0_C4 - Peak Volumes
 
 def get_peak_volumes(volumes):
-    # Write your code here
-    return "not implemented"
+    peaks = []
+    peak = -73
+    for volume in volumes:
+        temp = peak
+        if volume < -72:
+            peak = -73 # Reset peak
+            temp = '-Inf'
+        elif volume > 10:
+            peak = -73 # Reset peak
+            temp = 'CLIP'
+        elif volume > peak:
+            peak = volume
+            temp = volume
+
+        peaks.append(temp)
+
+    return peaks
 
 #### DO NOT TOUCH CODE BELOW THIS LINE ####
 if __name__ == '__main__':
