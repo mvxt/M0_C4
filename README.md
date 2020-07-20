@@ -1,5 +1,5 @@
 # M0_C4 - Peak Volumes
-Repository with prompt and code for Module 1, Challenge 4: Max Volume Second.
+Repository with prompt and code for Module 1, Challenge 4: Peak Volumes.
 
 ## Prompt
 As an audio engineer, your job is to mix and master music to generate hit songs for a popular artist. One of the things you have to do is see the peak volume of the mix at any second so you can properly balance it.
@@ -71,5 +71,5 @@ This 3-second song goes above +10 at index 1 and clips, which resets the peak vo
 ## Instructions
 1. Fork this repository to your own account.
 2. Clone the forked repository to your local computer.
-3. Inside `loudest_second.py`, you should see a function definition with no content. Write your logic there.
-4. While you're writing and/or when you're done, you can execute the provided tests to verify your function works by running `python3 test_loudest_second.py`. Acceptable is at least 4/6 tests passing. All tests are passing if you see `OK` in the output.
+3. Inside `peak_volumes.py`, you should see a function definition with no content. Write your logic there.
+4. While you're writing and/or when you're done, you can execute the provided tests to verify your function works by running `python3 test_peak_volumes.py`. Acceptable is at least 4/6 tests passing. All tests are passing if you see `OK` in the output.
