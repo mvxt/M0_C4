@@ -27,7 +27,7 @@ class TestGetLoudestSecond(unittest.TestCase):
     def test_clip_resets_peak(self):
         """Checks that peak is reset after CLIP"""
         test = [-62, -71, -43, 12, -14, -21, -64, -4, -68, -12, -35]
-        expected = [-62, -71, -43, 'CLIP', -14, -14, -14, -4, -4, -4, -4]
+        expected = [-62, -62, -43, 'CLIP', -14, -14, -14, -4, -4, -4, -4]
         actual = get_peak_volumes(test)
         self.assertEqual(expected, actual)
 
